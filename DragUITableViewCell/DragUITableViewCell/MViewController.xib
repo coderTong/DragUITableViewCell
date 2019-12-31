@@ -19,16 +19,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvW-Dk-fJl">
+                    <rect key="frame" x="186" y="110" width="42" height="34"/>
+                    <state key="normal" title="刷新 ">
+                        <color key="titleColor" red="0.92941176469999998" green="0.062745098040000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnRefreshClick:" destination="-1" eventType="touchUpInside" id="RhM-X6-ha5"/>
+                    </connections>
+                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0cN-Xi-LBd">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="154" width="414" height="708"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="KvW-Dk-fJl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1gw-cq-5gz"/>
                 <constraint firstItem="0cN-Xi-LBd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="2wp-qV-PYm"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="0cN-Xi-LBd" secondAttribute="bottom" id="ELs-NZ-PvO"/>
-                <constraint firstItem="0cN-Xi-LBd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="LqV-O2-ofp"/>
+                <constraint firstItem="KvW-Dk-fJl" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="66" id="PXY-RZ-XSO"/>
+                <constraint firstItem="0cN-Xi-LBd" firstAttribute="top" secondItem="KvW-Dk-fJl" secondAttribute="bottom" constant="10" id="Tmj-TQ-HXu"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0cN-Xi-LBd" secondAttribute="trailing" id="Y64-mT-Q5b"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

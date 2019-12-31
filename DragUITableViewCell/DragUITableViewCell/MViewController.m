@@ -37,12 +37,19 @@ static NSString * DragCellIdentifier = @"DragCell";
     
     [self setUpMainUI];
 }
+- (IBAction)btnRefreshClick:(id)sender {
+    
+    NSLog(@"%s %@", __func__, self.dataArray);
+    [self.tableView reloadData];
+    
+    
+}
 
 - (void)setUpMainUI
 {
     self.dataArray = [NSMutableArray array];
 
-    for (int i = 0; i<20; i++) {
+    for (int i = 0; i<6; i++) {
         
         NSString * title = [NSString stringWithFormat:@"cell-%d", i];
         [self.dataArray addObject:title];
